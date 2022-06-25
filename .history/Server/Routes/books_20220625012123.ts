@@ -52,7 +52,6 @@ router.post('/add', (req, res, next) => {
     /*****************
      * ADD CODE HERE *
      *****************/
-    //call book data
     let newBook =  new book({
       "Title": req.body.title,
       "Price": req.body.price,
@@ -87,7 +86,6 @@ router.get('/:id', (req, res, next) => {
         console.error(err);
         res.end(err);
       }
-      //log for trigger
       console.log("Edit Books", booksToEdit);
       res.render('books/details', {
         title: 'Edit book', 
@@ -106,7 +104,6 @@ router.post('/:id', (req, res, next) => {
     /*****************
      * ADD CODE HERE *
      *****************/
-    //Process book data for edit
      let id=req.params.id;
      let updateBooks = new book
     ({
@@ -137,7 +134,6 @@ router.get('/delete/:id', (req, res, next) => {
     /*****************
      * ADD CODE HERE *
      *****************/
-    //process to get data to deleted
     let id = req.params.id;
     book.remove({_id:id}, function(err: CallbackError)
     {

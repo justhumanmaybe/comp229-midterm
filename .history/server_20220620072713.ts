@@ -1,8 +1,3 @@
-/**********************/
-/*      Anson Ng      */
-/*      301202061     */
-/*   Mid-term test    */
-/**********************/
 import createError from 'http-errors';
 import app from './Server/Config/app';
 import debug from 'debug';
